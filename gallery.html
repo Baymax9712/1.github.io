@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Grow Soft Tech - Gallery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Grow Soft Tech</a></h1>
+            <h2>Gallery</h2>
+            <p>Explore our collection of electronic jacquards and innovative designs</p>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="main">
+                <h2></h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="images/5376.jpg" alt="Jacquard Design 1" data-full="images/5376.jpg" /></div>
+                    <div class="gallery-item"><img src="images/m1.jpg" alt="Jacquard Design 2" data-full="images/m1.jpg"/></div>
+                    <div class="gallery-item"><img src="images/960.jpg" alt="Jacquard Design 3" data-full="images/960.jpg"/></div>
+                    <div class="gallery-item"><img src="images/HMI.jpg" alt="Jacquard Design 4" data-full="images/HMI.jpg"/></div>
+                    <div class="gallery-item"><img src="images/grow softtech back.jpg" alt="Jacquard Design 5" data-full="images/grow softtech back.jpg" /></div>
+                    <div class="gallery-item"><img src="images/2688 WITH GM copy.jpg" alt="Jacquard Design 6"  data-full="images/2688 WITH GM copy.jpg"/></div>
+                </div>
+            </section>
+
+            <br>
+            <br>
+            <!-- Video Section -->
+            <section id="videos" class="main">
+                <h2>Video Gallery</h2>
+                    <div class="video-grid">
+                        <div class="video-item">
+                          <video controls width="100%">
+                         <source src="images/on factory .mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                         </video>
+                     <p></p>
+                     </div>
+                    <div class="video-item">
+                      <video controls width="100%">
+                        <source src="images/shuttle loom.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                    </video>
+                    <p></p>
+                    </div>
+                    <div class="video-item">
+                     <video controls width="100%">
+                      <source src="images/Korean rapier 240rpm.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                    </video>
+                     <p></p>
+                 </div>
+        <!-- Add more videos as needed -->
+                </div>
+            </section>
+
+
+
+        </div>
+<!-- Lightbox Container -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Expanded Image">
+</div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>Contact Us</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd>3717/C GIDC, Sachin &bull; Surat &bull; Sachin INA &bull; Gujarat 395320 &bull; India</dd>
+                    <dt>Phone</dt>
+                    <dd>+91 97008 00850</dd>
+                    <dt>Email</dt>
+                    <dd><a href="mailto:97growtech@gmail.com">97growtech@gmail.com</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/growjacquard" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.indiamart.com/grow-soft-tech/" class="icon brands fa-store-alt"><span class="label">India Mart</span></a></li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Get elements
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close");
+    
+        // Open lightbox when an image is clicked
+        document.querySelectorAll(".gallery-item img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.getAttribute("data-full"); // Use full image URL
+            });
+        });
+    
+        // Close lightbox when close button is clicked
+        closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+            lightboxImg.src = ""; // Clear the source
+        });
+    
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+                lightboxImg.src = ""; // Clear the source
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
