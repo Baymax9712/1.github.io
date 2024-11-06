@@ -3865,10 +3865,11 @@ input, select, textarea {
     font-weight: bold;
   }
 
-  /* Hide the menu by default on smaller screens */
+  /* Styles for the hamburger icon and mobile menu */
   @media (max-width: 768px) {
+    /* Hide the navigation links on smaller screens */
     #nav ul {
-      display: none; /* Hide the menu */
+      display: none;
       flex-direction: column;
       position: absolute;
       background-color: #fff;
@@ -3878,24 +3879,27 @@ input, select, textarea {
       width: 200px;
       padding: 10px;
       border-radius: 5px;
-      z-index: 1000; /* Ensure it appears on top */
+      z-index: 1000;
     }
 
-    /* Show the menu when the "show" class is added */
+    /* Show the navigation when the .show class is added */
     #nav ul.show {
       display: flex;
     }
 
-    /* Hamburger menu icon */
+    /* Hamburger menu icon style */
     .menu-icon {
       display: block;
-      cursor: pointer;
       font-size: 24px;
       color: #666;
-      position: absolute;
+      position: fixed; /* Fixed positioning for better visibility */
       top: 10px;
       right: 20px;
-      z-index: 1100; /* Higher z-index for the icon */
+      cursor: pointer;
+      z-index: 1100; /* Ensure it appears on top of other elements */
+      background-color: #fff; /* Background to make it stand out */
+      padding: 5px;
+      border-radius: 5px;
     }
   }
 
