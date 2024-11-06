@@ -3847,7 +3847,7 @@ input, select, textarea {
 }
 
 
-  /* Basic styles for the navigation */
+  /* Basic styles for desktop navigation */
   #nav ul {
     display: flex;
     list-style-type: none;
@@ -3865,10 +3865,10 @@ input, select, textarea {
     font-weight: bold;
   }
 
-  /* Hide navigation items on smaller screens */
+  /* Hide the menu by default on smaller screens */
   @media (max-width: 768px) {
     #nav ul {
-      display: none; /* Hide the menu initially */
+      display: none; /* Hide the menu */
       flex-direction: column;
       position: absolute;
       background-color: #fff;
@@ -3878,10 +3878,12 @@ input, select, textarea {
       width: 200px;
       padding: 10px;
       border-radius: 5px;
+      z-index: 1000; /* Ensure it appears on top */
     }
 
+    /* Show the menu when the "show" class is added */
     #nav ul.show {
-      display: flex; /* Show menu when the hamburger is clicked */
+      display: flex;
     }
 
     /* Hamburger menu icon */
@@ -3893,5 +3895,8 @@ input, select, textarea {
       position: absolute;
       top: 10px;
       right: 20px;
+      z-index: 1100; /* Higher z-index for the icon */
     }
   }
+
+
