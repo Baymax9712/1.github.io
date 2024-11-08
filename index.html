@@ -181,63 +181,6 @@
 			  </script>
 			  
 
-				
-  // Function to validate the form fields
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-    // Clear previous error messages
-    document.getElementById("first-name-error").innerText = "";
-    document.getElementById("last-name-error").innerText = "";
-    document.getElementById("email-error").innerText = "";
-    document.getElementById("message-error").innerText = "";
-    
-    // Get the input values
-    const firstName = document.getElementById("first-name").value.trim();
-    const lastName = document.getElementById("last-name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    
-    // Regular expressions for validation
-    const nameRegex = /^[A-Za-z]{2,}$/; // Ensures no initials (at least two letters, no spaces)
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Basic email format
-
-    let isValid = true;
-
-    // Validate First Name (no initials)
-    if (!nameRegex.test(firstName)) {
-      document.getElementById("first-name-error").innerText = "Please enter a full first name (no initials).";
-      isValid = false;
-    }
-
-    // Validate Last Name (no initials)
-    if (!nameRegex.test(lastName)) {
-      document.getElementById("last-name-error").innerText = "Please enter a full last name (no initials).";
-      isValid = false;
-    }
-
-    // Validate Email
-    if (!emailRegex.test(email)) {
-      document.getElementById("email-error").innerText = "Please enter a valid email address.";
-      isValid = false;
-    }
-
-    // Validate Message Word Count
-    const messageWords = message.split(/\s+/).filter(word => word.length > 0); // Count non-empty words
-    const wordCount = messageWords.length;
-    if (wordCount < 10) {
-      document.getElementById("message-error").innerText = "Message must be at least 10 words.";
-      isValid = false;
-    } else if (wordCount > 200) {
-      document.getElementById("message-error").innerText = "Message cannot exceed 200 words.";
-      isValid = false;
-    }
-
-    // If any validation fails, prevent form submission
-    if (!isValid) {
-      event.preventDefault(); // Prevent the form from submitting
-    }
-});
-
-			  </script>
 			  
 
 	</body>
