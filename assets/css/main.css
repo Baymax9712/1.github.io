@@ -3846,8 +3846,7 @@ input, select, textarea {
     color: #bbb;
 }
 
-
-  /* Basic styles for desktop navigation */
+  /* Desktop Navigation */
   #nav ul {
     display: flex;
     list-style-type: none;
@@ -3865,11 +3864,11 @@ input, select, textarea {
     font-weight: bold;
   }
 
-  /* Styles for the hamburger icon and mobile menu */
+  /* Hide the menu by default on smaller screens */
   @media (max-width: 768px) {
-    /* Hide the navigation links on smaller screens */
+    /* Hide navigation items initially on mobile */
     #nav ul {
-      display: none;
+      display: none; /* Hide the menu */
       flex-direction: column;
       position: absolute;
       background-color: #fff;
@@ -3882,7 +3881,7 @@ input, select, textarea {
       z-index: 1000;
     }
 
-    /* Show the navigation when the .show class is added */
+    /* Show the menu when the "show" class is added */
     #nav ul.show {
       display: flex;
     }
@@ -3902,5 +3901,13 @@ input, select, textarea {
       border-radius: 5px;
     }
   }
+
+  /* Hide the hamburger icon on larger screens */
+  @media (min-width: 769px) {
+    .menu-icon {
+      display: none;
+    }
+  }
+
 
 
