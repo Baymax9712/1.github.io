@@ -3846,16 +3846,19 @@ input, select, textarea {
     color: #bbb;
 }
 
- /* Basic navigation styles */
+/* Navbar styling */
 #nav {
     display: flex;
     justify-content: center;
     background-color: #f7f7f7;
-    padding: 10px 0;
+    padding: 15px 0; /* Added padding for better spacing */
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1000; /* Ensures nav stays visible at the top */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better definition */
+    z-index: 1000;
+    border-bottom: 1px solid #ddd; /* Border to visually separate nav from content */
 }
 
 #nav ul {
@@ -3866,41 +3869,48 @@ input, select, textarea {
 }
 
 #nav li {
-    margin: 0 15px; /* Keeps items spaced out */
+    margin: 0 10px;
 }
 
 #nav a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1em; /* Standard font size */
+    padding: 10px 15px; /* Adds padding for each link */
+    border-radius: 8px;
 }
 
-/* Adjustments for smaller screens */
+/* Active link style */
+#nav a.active {
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     #nav a {
-        font-size: 0.9em; /* Slightly smaller font size */
+        font-size: 0.9em;
     }
 }
 
 @media (max-width: 480px) {
     #nav a {
-        font-size: 0.8em; /* Further reduce font size */
+        font-size: 0.8em;
     }
     #nav li {
-        margin: 0 8px; /* Reduce space between items */
+        margin: 0 8px;
     }
 }
 
 @media (max-width: 360px) {
-    #nav {
-        padding: 5px 0; /* Reduce padding on very small screens */
-    }
     #nav a {
-        font-size: 0.7em; /* Make font smaller to fit */
+        font-size: 0.7em;
     }
     #nav li {
-        margin: 0 5px; /* Further reduce space */
+        margin: 0 5px;
+    }
+    #nav {
+        padding: 10px 0; /* Adjust padding for very small screens */
     }
 }
 
