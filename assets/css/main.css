@@ -3846,48 +3846,61 @@ input, select, textarea {
     color: #bbb;
 }
 
- /* Base navigation styles */
-#nav ul {
+ /* Basic navigation styles */
+#nav {
     display: flex;
-    list-style-type: none;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures nav stays visible at the top */
+}
+
+#nav ul {
+    display: inline-flex;
+    list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center; /* Center the menu items */
 }
 
 #nav li {
-    margin: 0 15px;
+    margin: 0 15px; /* Keeps items spaced out */
 }
 
 #nav a {
+    color: #333;
     text-decoration: none;
-    color: #666;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1em; /* Standard font size */
 }
 
-/* Responsive adjustments */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    #nav ul {
-        justify-content: space-around; /* Distribute items evenly on smaller screens */
-    }
-
-    #nav li {
-        margin: 0 5px; /* Reduce margin to fit items in smaller widths */
-    }
-
     #nav a {
-        font-size: 0.9em; /* Adjust font size to avoid wrapping */
+        font-size: 0.9em; /* Slightly smaller font size */
     }
 }
 
 @media (max-width: 480px) {
-    #nav ul {
-        flex-wrap: nowrap; /* Prevent wrapping of items */
-    }
-
     #nav a {
         font-size: 0.8em; /* Further reduce font size */
-        padding: 5px; /* Optional: Add padding for better touch target on mobile */
+    }
+    #nav li {
+        margin: 0 8px; /* Reduce space between items */
     }
 }
+
+@media (max-width: 360px) {
+    #nav {
+        padding: 5px 0; /* Reduce padding on very small screens */
+    }
+    #nav a {
+        font-size: 0.7em; /* Make font smaller to fit */
+    }
+    #nav li {
+        margin: 0 5px; /* Further reduce space */
+    }
+}
+
