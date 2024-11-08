@@ -3848,6 +3848,7 @@ input, select, textarea {
 
   /* Desktop Navigation */
   #nav ul {
+	align-items: center;
     display: flex;
     list-style-type: none;
     padding: 0;
