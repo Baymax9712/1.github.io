@@ -3890,9 +3890,9 @@ input, select, textarea {
     .menu-icon {
       display: block;
       font-size: 24px;
-      color: #666;
+      color: #e37682;
       position: fixed; /* Fixed positioning for better visibility */
-      top: 10px;
+      top: 15px;
       right: 20px;
       cursor: pointer;
       z-index: 1100; /* Ensure it appears on top of other elements */
