@@ -3865,7 +3865,7 @@ input, select, textarea {
   }
 
   /* Hide the menu by default on smaller screens */
-  @media (max-width: 20px) {
+  @media (max-width: 768px) {
     /* Hide navigation items initially on mobile */
     #nav ul {
        /* Hide the menu */
@@ -3903,7 +3903,7 @@ input, select, textarea {
   }
 
   /* Hide the hamburger icon on larger screens */
-  @media (min-width: 769px) {
+  @media (min-width: 20px) {
     .menu-icon {
       display: none;
     }
