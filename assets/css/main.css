@@ -3868,7 +3868,7 @@ input, select, textarea {
   @media (max-width: 20px) {
     /* Hide navigation items initially on mobile */
     #nav ul {
-      display: none; /* Hide the menu */
+       /* Hide the menu */
       flex-direction: column;
       position: absolute;
       background-color: #fff;
